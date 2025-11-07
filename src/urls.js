@@ -1,5 +1,5 @@
 // Base URL
-const baseUrl = "https://cappah-international-backend.vercel.app";
+const baseUrl = "https://cappah-testing-backend.vercel.app";
 
 //URL to fetch all products
 const productsUrl = `${baseUrl}/api/v1/product/`;
