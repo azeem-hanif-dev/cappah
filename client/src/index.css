@@ -1,0 +1,214 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.isolate_container {
+  @apply px-7 md:px-10 lg:px-14    py-6 md:py-12 lg:py-24;
+}
+
+.full_container {
+  @apply py-6 md:py-12 lg:py-24;
+}
+
+.image_container {
+  @apply px-7 md:px-10 lg:px-14     py-6 md:py-12 lg:py-24 h-48 md:h-96;
+}
+
+.isolate_bars {
+  @apply px-7 md:px-10 lg:px-14     py-2 md:py-3 lg:py-4;
+}
+
+.child_bars {
+  @apply px-7 md:px-10 lg:px-14     pt-2 md:pt-3 lg:pt-4;
+}
+
+.child_container {
+  @apply px-7 md:px-10 lg:px-14     pt-6 md:pt-12 lg:pt-24;
+}
+
+.button {
+  @apply py-3;
+}
+
+.inputfield {
+  @apply py-3 px-6;
+}
+
+.searchfield {
+  @apply py-2 px-6;
+}
+
+.container_difference {
+  @apply gap-3 md:gap-6 lg:gap-12 xl:gap-20;
+}
+
+.spaceItems {
+  @apply space-y-6;
+}
+
+/* Padding Classes*/
+.paddingleft {
+  @apply pl-7 md:pl-10 lg:pl-14;
+}
+.paddingright {
+  @apply pr-7 md:pr-10 lg:pr-14;
+}
+.paddingtop {
+  @apply pt-6 md:pt-12 lg:pt-24;
+}
+.paddingbottom {
+  @apply pb-6 md:pb-12 lg:pb-24;
+}
+
+/* components */
+.dualcomponent {
+  @apply flex justify-between items-center;
+}
+
+/* Font Configuration */
+
+.title {
+  @apply text-3xl lg:text-5xl xl:text-7xl;
+}
+.heading {
+  @apply text-4xl lg:text-4xl xl:text-5xl;
+}
+.subheading1 {
+  @apply text-3xl lg:text-3xl xl:text-4xl;
+}
+.subheading2 {
+  @apply text-2xl lg:text-2xl xl:text-3xl;
+}
+.subheading3 {
+  @apply text-xl lg:text-xl xl:text-2xl;
+}
+
+.content {
+  @apply text-lg lg:text-lg xl:text-xl;
+}
+
+.minicontent {
+  @apply text-base lg:text-base xl:text-lg;
+}
+.microcontent {
+  @apply text-sm lg:text-sm xl:text-base;
+}
+
+.buttontext {
+  @apply text-base lg:text-lg xl:text-xl;
+}
+.inputtext {
+  @apply text-base lg:text-lg xl:text-xl;
+}
+
+.tablepadding {
+  @apply xl:p-6 lg:p-5 p-4;
+}
+
+.custom-placeholder::placeholder {
+  color: #267CD2;
+}
+
+@font-face {
+  font-family: "Blacksword";
+  src: local("Blacksword"), url("/Fonts/Blacksword.otf") format("opentype");
+}
+
+.subnavbutton {
+  @apply bg-seagreen h-16 py-3 md:flex justify-center items-center border border-white text-center transition-all duration-500 ease-in-out hover:bg-white hover:text-primary;
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-modal-appear {
+  animation: modalAppear 0.3s ease-out forwards;
+}
+.productMenu {
+  @apply py-5 px-12;
+}
+
+/* Splash Screen */
+.splash-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: transform 0.8s ease-in-out;
+  transform-origin: top;
+}
+
+.splash-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.splash-visible {
+  transform: translateY(0);
+}
+
+.splash-hidden {
+  transform: translateY(-100vh);
+}
+
+/* Base styles for the checkbox */
+.custom-checkbox {
+  width: 20px; /* Increased size for better visibility */
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer;
+  appearance: none;
+  outline: none;
+  background-color: white; /* Default background */
+  position: relative; /* Needed for ::after positioning */
+  display: inline-block; /* Ensure it's inline */
+}
+
+/* When the checkbox is checked */
+.custom-checkbox:checked {
+  background-color: #267CD2; /* Primary */
+  border: 1px solid #267CD2;
+}
+
+/* Add the tick mark using ::after */
+.custom-checkbox:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px; /* Adjust width of the tick */
+  height: 12px; /* Adjust height of the tick */
+  border: solid white;
+  border-width: 0 2px 2px 0; /* Thickness of the tick */
+  transform: translate(-50%, -50%) rotate(45deg); /* Center and rotate */
+  box-sizing: border-box;
+}
+
+.input {
+  @apply w-full p-3 text-black rounded-lg border border-gray focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.addModalBtn {
+  @apply px-4 py-2 bg-white text-black rounded-md hover:bg-gray hover:text-white;
+}
+
+.cancelModalBtn {
+  @apply px-4 py-2 bg-gray text-white rounded-md hover:bg-white hover:text-black;
+}
